@@ -22,8 +22,8 @@ Antes de rodar o bot, você precisa ter instalado:
 - [Gemini-Ai](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br/)  
 
 **OBS**:
-É possível aplicar outro modelo, usei o Gemini por ser de livre acesso o uso de tokens
-
+- É possível aplicar outro modelo, usei o Gemini por ser de livre acesso o uso de tokens
+- Foi usado 2 tokens (Discord e Gemini), não será postados por segurança, mas caso queira a chave para inicializar o bot, é necessário acessar [este link](https://discord.com/developers/docs/intro)
 ## Instalação:
 ```bash
 pip install discord.py google-genai python-dotenv
