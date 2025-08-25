@@ -1,4 +1,4 @@
-# 🤖Discord.py Bot com integração de IA
+# Discord.py Bot com integração de IA
 
 Um bot para Discord integrado com **GenAI** (ex: Gemini API), desenvolvido em **Python** com a biblioteca `discord.py`.  
 Ele permite que os usuários conversem com uma IA diretamente no servidor, simulando um assistente inteligente ou até mesmo um mascote digital.  
@@ -21,7 +21,7 @@ Antes de rodar o bot, você precisa ter instalado:
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [Gemini-Ai](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br/)  
 
-### OBS:
+**OBS**:
 É possível aplicar outro modelo, usei o Gemini por ser de livre acesso o uso de tokens
 
 ## Instalação:
