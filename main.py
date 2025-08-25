@@ -60,9 +60,6 @@ async def ask_gemini(ctx, *, question: str):
                     return
                 response = client.models.generate_content(model="gemini-2.5-flash",contents=f'{personalidade}\n\n{question}')
                 resposta_txt = response.text
-                #await ctx.send(f"{response.text}")
-                #divisão de mensagens
-                
                 
                 #Bloqueio de saída 
                 if contains_mention(resposta_txt):
@@ -83,5 +80,6 @@ if __name__ == '__main__':
     load_dotenv()
     discord_key = os.getenv("DISCORD_TOKEN")
     bot.run(discord_key)
+
 
 
