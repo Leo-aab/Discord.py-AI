@@ -78,40 +78,10 @@ async def ask_gemini(ctx, *, question: str):
             except Exception as e:
                 await ctx.send(f"Travei um pouco aqui, mande de novo a pergunta!!: {e}",allowed_mentions=discord.AllowedMentions.none())
 
-#comando de sniper
-bot.sniped_messages = {}
-@bot.event
-async def on_message_delete(message):
-    if not message.author.bot: # Don't snipe bot messages
-        bot.sniped_messages[message.channel.id] = {
-            "content": message.content,
-            "author": message.author,
-            "channel": message.channel,
-            "timestamp": message.created_at
-        }
-        
-@bot.command()
-async def snipe(ctx):
-    if ctx.channel.id in bot.sniped_messages:
-        sniped_info = bot.sniped_messages[ctx.channel.id]
-        embed = discord.Embed(
-            description=sniped_info["content"],
-            color=discord.Color.blue(),
-            timestamp=sniped_info["timestamp"]
-        )
-        embed.set_author(name=str(sniped_info["author"]), icon_url=sniped_info["author"].avatar.url)
-        embed.set_footer(text=f"Esnaipada em #{sniped_info['channel'].name}")
-        await ctx.send(embed=embed)
-        del bot.sniped_messages[ctx.channel.id] # Optionally clear after sniping
-    else:
-        await ctx.send("Não tem nada pra esnaipar.... </3")
-
-
-
-
 
 if __name__ == '__main__':
     load_dotenv()
     discord_key = os.getenv("DISCORD_TOKEN")
     bot.run(discord_key)
+
 
